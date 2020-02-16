@@ -1,11 +1,12 @@
 <?php
-    declare(strict_types=1);
 
-    require __DIR__ . '/../GrafanaOAuth.php';
+declare(strict_types=1);
 
-    /**
-     * Fetch the details of Grafana user from your database.
-     */
-    $user = require __DIR__ . '/../sample_user.php';
+require __DIR__ . '/../GrafanaOAuth.php';
 
-    (new GrafanaOAuth($user))->auth($_GET['state']);
+/**
+ * Fetch the details of Grafana user from your database.
+ */
+$user = require __DIR__ . '/../sample_user.php';
+
+(new GrafanaOAuth($user))->auth($_GET['state']);

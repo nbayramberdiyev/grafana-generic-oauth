@@ -1,13 +1,14 @@
 <?php
-    declare(strict_types=1);
 
-    header('Content-Type: application/json');
+declare(strict_types=1);
 
-    require __DIR__ . '/../GrafanaOAuth.php';
+header('Content-Type: application/json');
 
-    /**
-     * Fetch the details of Grafana user from your database.
-     */
-    $user = require __DIR__ . '/../sample_user.php';
+require __DIR__ . '/../GrafanaOAuth.php';
 
-    (new GrafanaOAuth($user))->token();
+/**
+ * Fetch the details of Grafana user from your database.
+ */
+$user = require __DIR__ . '/../sample_user.php';
+
+echo (new GrafanaOAuth($user))->token();
